@@ -1,0 +1,10 @@
+{
+  "release": "videos",
+  "videos": [
+    {
+      "id": "001",
+      "name": "Funny Cats",
+      "youtube": "https://www.youtube.com/watch?v=XXXXXXXX"
+    }
+  ]
+}
