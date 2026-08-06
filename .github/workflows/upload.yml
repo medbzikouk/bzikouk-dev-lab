@@ -1,0 +1,372 @@
+# =============================================================================
+# upload.yml
+# -----------------------------------------------------------------------------
+# Purpose:
+#   Reads "videos.json" from the repo root, downloads every listed YouTube
+#   video with yt-dlp, uploads each one as an asset on a GitHub Release,
+#   writes the results (including direct download URLs) to
+#   "videos_output.json", and commits that file back to the repo — but only
+#   when it actually changed.
+#
+# Triggers:
+#   - push to videos.json (any branch the push happens on)
+#   - workflow_dispatch (manual "Run workflow" button)
+#
+# Requirements satisfied:
+#   - Uses only the built-in GITHUB_TOKEN (no PAT needed)
+#   - Idempotent: never re-downloads or re-uploads an asset that already
+#     exists in the release
+#   - Never aborts the whole run because a single video fails
+#   - Prints a clear summary at the end
+# =============================================================================
+
+name: Upload Videos to GitHub Releases
+
+on:
+  push:
+    paths:
+      - "videos.json"
+  workflow_dispatch: {}
+
+# "contents: write" is required to:
+#   - create/read GitHub Releases
+#   - upload release assets
+#   - push the commit that updates videos_output.json
+permissions:
+  contents: write
+
+# Prevents two runs from racing each other (e.g. a rapid double-push),
+# which could create duplicate releases/assets or conflicting commits.
+concurrency:
+  group: upload-videos-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  VIDEOS_INPUT: videos.json
+  VIDEOS_OUTPUT: videos_output.json
+  DOWNLOAD_DIR: downloads
+  # Hard ceiling per-video download time, to guarantee the job can never
+  # hang forever on a single stuck download.
+  DOWNLOAD_TIMEOUT_SECONDS: 900
+  YTDLP_RETRIES: 5
+
+jobs:
+  upload-videos:
+    name: Download & Upload Videos
+    runs-on: ubuntu-latest
+    # Safety net for the whole job (adjust for large video catalogs).
+    timeout-minutes: 120
+
+    steps:
+      # -----------------------------------------------------------------
+      # 1. Checkout the repository
+      #    persist-credentials (default: true) keeps GITHUB_TOKEN wired up
+      #    to the git CLI so the final "git push" step works without any
+      #    extra configuration.
+      # -----------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # -----------------------------------------------------------------
+      # 2. Install dependencies
+      #    jq and GitHub CLI (gh) are already preinstalled on GitHub-hosted
+      #    ubuntu-latest runners, but we install/upgrade defensively so the
+      #    workflow also works unmodified on self-hosted runners.
+      #    yt-dlp is installed as a standalone binary (not via pip) so no
+      #    Python environment setup is required.
+      #    ffmpeg is required by yt-dlp to merge separate video+audio
+      #    streams into a single MP4.
+      # -----------------------------------------------------------------
+      - name: Install system dependencies (jq, ffmpeg)
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y --no-install-recommends jq ffmpeg
+
+      - name: Install GitHub CLI (gh) if missing
+        run: |
+          if ! command -v gh >/dev/null 2>&1; then
+            echo "gh not found, installing..."
+            type -p curl >/dev/null || sudo apt-get install -y curl
+            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+              | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+            sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+            echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" \
+              | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+            sudo apt-get update -y
+            sudo apt-get install -y gh
+          else
+            echo "gh already installed."
+          fi
+
+      - name: Install yt-dlp (latest release binary)
+        run: |
+          sudo curl -fsSL \
+            https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
+            -o /usr/local/bin/yt-dlp
+          sudo chmod a+rx /usr/local/bin/yt-dlp
+
+      # -----------------------------------------------------------------
+      # 3. Verify every tool before continuing.
+      #    If any tool is broken/missing, fail fast with a clear message
+      #    rather than failing confusingly mid-loop later on.
+      # -----------------------------------------------------------------
+      - name: Verify required tools
+        run: |
+          set -euo pipefail
+          echo "jq:      $(jq --version)"
+          echo "ffmpeg:  $(ffmpeg -version | head -n1)"
+          echo "yt-dlp:  $(yt-dlp --version)"
+          echo "gh:      $(gh --version | head -n1)"
+          echo "All required tools are available."
+
+      # -----------------------------------------------------------------
+      # 4. Validate videos.json before we start doing real work.
+      # -----------------------------------------------------------------
+      - name: Validate videos.json
+        run: |
+          set -euo pipefail
+          if [ ! -f "$VIDEOS_INPUT" ]; then
+            echo "::error::$VIDEOS_INPUT was not found in the repository root."
+            exit 1
+          fi
+          jq empty "$VIDEOS_INPUT"
+          echo "$VIDEOS_INPUT is present and contains valid JSON."
+
+      # -----------------------------------------------------------------
+      # 5. Core logic: create/reuse the release, then loop through every
+      #    video — skipping ones already uploaded, downloading + uploading
+      #    the rest, and recording a result entry for each video no matter
+      #    the outcome. Errors in one video are caught and logged; the
+      #    loop always continues to the next video.
+      # -----------------------------------------------------------------
+      - name: Process videos (download & upload)
+        id: process
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uo pipefail   # NOTE: no "-e" on purpose — a failing video
+                              # must not kill the whole script.
+          mkdir -p "$DOWNLOAD_DIR"
+
+          REPO="$GITHUB_REPOSITORY"
+          RELEASE_TAG=$(jq -r '.release' "$VIDEOS_INPUT")
+
+          if [ -z "$RELEASE_TAG" ] || [ "$RELEASE_TAG" = "null" ]; then
+            echo "::error::'release' field is missing from $VIDEOS_INPUT"
+            exit 1
+          fi
+
+          echo "::group::Release setup ($RELEASE_TAG)"
+          if gh release view "$RELEASE_TAG" --repo "$REPO" >/dev/null 2>&1; then
+            echo "Release '$RELEASE_TAG' already exists — reusing it."
+          else
+            echo "Release '$RELEASE_TAG' does not exist — creating it."
+            gh release create "$RELEASE_TAG" \
+              --repo "$REPO" \
+              --title "$RELEASE_TAG" \
+              --notes "Automated video release managed by upload.yml. Do not delete assets manually — re-running the workflow will not restore them automatically."
+          fi
+          echo "::endgroup::"
+
+          # Fetch the asset list ONCE up front (one API call) instead of
+          # per-video, to keep API usage minimal.
+          EXISTING_ASSETS_JSON=$(gh api "repos/$REPO/releases/tags/$RELEASE_TAG" --jq '.assets')
+
+          VIDEO_COUNT=$(jq '.videos | length' "$VIDEOS_INPUT")
+          echo "Found $VIDEO_COUNT video(s) in $VIDEOS_INPUT."
+
+          SUCCESS_COUNT=0
+          FAILED_COUNT=0
+          SKIPPED_COUNT=0
+          OUTPUT_VIDEOS="[]"
+
+          for i in $(seq 0 $((VIDEO_COUNT - 1))); do
+            VIDEO=$(jq -c ".videos[$i]" "$VIDEOS_INPUT")
+            ID=$(echo "$VIDEO" | jq -r '.id')
+            NAME=$(echo "$VIDEO" | jq -r '.name')
+            YOUTUBE_URL=$(echo "$VIDEO" | jq -r '.youtube')
+
+            echo "::group::[$ID] $NAME"
+            echo "YouTube URL: $YOUTUBE_URL"
+
+            # --- Build a filesystem/URL-safe filename -------------------
+            SAFE_NAME=$(echo "$NAME" \
+              | sed 's/[\/\\:*?"<>|]/_/g' \
+              | sed -E 's/ +/ /g; s/^ +| +$//g')
+            FILENAME="${SAFE_NAME}.mp4"
+
+            # --- Skip if this asset already exists in the release -------
+            # This is the key duplicate-prevention check: it happens
+            # BEFORE downloading, so we never waste bandwidth re-fetching
+            # a video that's already uploaded.
+            EXISTING_URL=$(echo "$EXISTING_ASSETS_JSON" \
+              | jq -r --arg name "$FILENAME" '.[] | select(.name == $name) | .browser_download_url' \
+              | head -n1)
+
+            if [ -n "$EXISTING_URL" ]; then
+              echo "Asset '$FILENAME' already exists in release '$RELEASE_TAG'. Skipping download & upload."
+              ENTRY=$(jq -n \
+                --arg id "$ID" --arg name "$NAME" --arg youtube "$YOUTUBE_URL" \
+                --arg filename "$FILENAME" --arg url "$EXISTING_URL" \
+                --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+                '{id:$id, name:$name, youtube:$youtube, filename:$filename,
+                  download_url:$url, uploaded:true, uploaded_at:$ts,
+                  note:"already existed, skipped"}')
+              OUTPUT_VIDEOS=$(echo "$OUTPUT_VIDEOS" | jq --argjson e "$ENTRY" '. + [$e]')
+              SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
+              echo "::endgroup::"
+              continue
+            fi
+
+            OUTPUT_PATH="$DOWNLOAD_DIR/$FILENAME"
+            LOG_FILE="$DOWNLOAD_DIR/${ID}.log"
+
+            # --- Download -------------------------------------------------
+            # -f: best available MP4 video+audio, falling back gracefully.
+            # --merge-output-format mp4: force ffmpeg to mux into MP4.
+            # --continue: resume partially downloaded files.
+            # --retries/--fragment-retries: automatic retry on network blips.
+            # timeout: hard cap so one stuck video can't hang the whole job.
+            echo "Downloading..."
+            if timeout "${DOWNLOAD_TIMEOUT_SECONDS}s" yt-dlp \
+                -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" \
+                --merge-output-format mp4 \
+                --no-playlist \
+                --continue \
+                --no-part \
+                --retries "$YTDLP_RETRIES" \
+                --fragment-retries "$YTDLP_RETRIES" \
+                --retry-sleep 5 \
+                --ignore-config \
+                --no-progress \
+                -o "$OUTPUT_PATH" \
+                "$YOUTUBE_URL" > "$LOG_FILE" 2>&1; then
+              DOWNLOAD_OK=1
+            else
+              DOWNLOAD_OK=0
+            fi
+            tail -n 20 "$LOG_FILE" || true
+
+            if [ "$DOWNLOAD_OK" -ne 1 ] || [ ! -s "$OUTPUT_PATH" ]; then
+              # Covers unavailable / private / deleted / geo-blocked videos,
+              # and any other yt-dlp failure — we log it and move on.
+              ERROR_MSG=$(tail -n 3 "$LOG_FILE" | tr '\n' ' ' | tr '"' "'")
+              echo "::warning::[$ID] $NAME — download failed or video unavailable. Skipping."
+              ENTRY=$(jq -n \
+                --arg id "$ID" --arg name "$NAME" --arg youtube "$YOUTUBE_URL" \
+                --arg error "Download failed: ${ERROR_MSG:-unknown error (video may be private/deleted/unavailable)}" \
+                --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+                '{id:$id, name:$name, youtube:$youtube, uploaded:false,
+                  error:$error, failed_at:$ts}')
+              OUTPUT_VIDEOS=$(echo "$OUTPUT_VIDEOS" | jq --argjson e "$ENTRY" '. + [$e]')
+              FAILED_COUNT=$((FAILED_COUNT + 1))
+              rm -f "$OUTPUT_PATH"
+              echo "::endgroup::"
+              continue
+            fi
+
+            echo "Downloaded: $OUTPUT_PATH ($(du -h "$OUTPUT_PATH" | cut -f1))"
+
+            # --- Upload -----------------------------------------------------
+            echo "Uploading to release '$RELEASE_TAG'..."
+            if gh release upload "$RELEASE_TAG" "$OUTPUT_PATH" \
+                --repo "$REPO" > "$DOWNLOAD_DIR/${ID}_upload.log" 2>&1; then
+              UPLOAD_OK=1
+            else
+              UPLOAD_OK=0
+            fi
+
+            if [ "$UPLOAD_OK" -ne 1 ]; then
+              UPLOAD_ERROR=$(tr '\n' ' ' < "$DOWNLOAD_DIR/${ID}_upload.log" | tr '"' "'")
+              echo "::warning::[$ID] $NAME — upload failed."
+              ENTRY=$(jq -n \
+                --arg id "$ID" --arg name "$NAME" --arg youtube "$YOUTUBE_URL" \
+                --arg error "Upload failed: ${UPLOAD_ERROR:-unknown error}" \
+                --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+                '{id:$id, name:$name, youtube:$youtube, uploaded:false,
+                  error:$error, failed_at:$ts}')
+              OUTPUT_VIDEOS=$(echo "$OUTPUT_VIDEOS" | jq --argjson e "$ENTRY" '. + [$e]')
+              FAILED_COUNT=$((FAILED_COUNT + 1))
+              rm -f "$OUTPUT_PATH"
+              echo "::endgroup::"
+              continue
+            fi
+
+            # Ask the API for the authoritative browser_download_url rather
+            # than constructing it by hand, so URL-encoding is always correct.
+            DOWNLOAD_URL=$(gh api "repos/$REPO/releases/tags/$RELEASE_TAG" \
+              --jq --arg name "$FILENAME" '.assets[] | select(.name == $name) | .browser_download_url' \
+              | head -n1)
+
+            echo "Uploaded successfully -> $DOWNLOAD_URL"
+
+            ENTRY=$(jq -n \
+              --arg id "$ID" --arg name "$NAME" --arg youtube "$YOUTUBE_URL" \
+              --arg filename "$FILENAME" --arg url "$DOWNLOAD_URL" \
+              --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+              '{id:$id, name:$name, youtube:$youtube, filename:$filename,
+                download_url:$url, uploaded:true, uploaded_at:$ts}')
+            OUTPUT_VIDEOS=$(echo "$OUTPUT_VIDEOS" | jq --argjson e "$ENTRY" '. + [$e]')
+            SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+
+            # Free up runner disk space immediately — important when the
+            # catalog has many/large videos.
+            rm -f "$OUTPUT_PATH"
+            echo "::endgroup::"
+          done
+
+          # --- Write videos_output.json -------------------------------------
+          RELEASE_NAME=$(jq -r '.release' "$VIDEOS_INPUT")
+          jq -n --arg release "$RELEASE_NAME" --argjson videos "$OUTPUT_VIDEOS" \
+            '{release: $release, videos: $videos}' > "$VIDEOS_OUTPUT"
+
+          echo "::group::Summary"
+          echo "Total videos:        $VIDEO_COUNT"
+          echo "Successful uploads:  $SUCCESS_COUNT"
+          echo "Skipped (existing):  $SKIPPED_COUNT"
+          echo "Failed:              $FAILED_COUNT"
+          echo "::endgroup::"
+
+          {
+            echo "total=$VIDEO_COUNT"
+            echo "success=$SUCCESS_COUNT"
+            echo "skipped=$SKIPPED_COUNT"
+            echo "failed=$FAILED_COUNT"
+          } >> "$GITHUB_OUTPUT"
+
+      # -----------------------------------------------------------------
+      # 6. Human-readable run summary in the Actions UI.
+      # -----------------------------------------------------------------
+      - name: Write job summary
+        if: always()
+        run: |
+          {
+            echo "### 🎬 Video Upload Summary"
+            echo ""
+            echo "| Metric | Count |"
+            echo "|---|---|"
+            echo "| Total videos | ${{ steps.process.outputs.total }} |"
+            echo "| ✅ Uploaded (new) | ${{ steps.process.outputs.success }} |"
+            echo "| ⏭️ Skipped (already existed) | ${{ steps.process.outputs.skipped }} |"
+            echo "| ❌ Failed | ${{ steps.process.outputs.failed }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # -----------------------------------------------------------------
+      # 7. Commit and push videos_output.json — only if it changed.
+      #    Uses the default GITHUB_TOKEN; no PAT required.
+      # -----------------------------------------------------------------
+      - name: Commit and push videos_output.json if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add "$VIDEOS_OUTPUT"
+
+          if git diff --cached --quiet; then
+            echo "No changes to $VIDEOS_OUTPUT — nothing to commit."
+          else
+            git commit -m "Update videos_output.json"
+            git push
+            echo "Changes committed and pushed."
+          fi
