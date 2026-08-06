@@ -245,11 +245,8 @@ jobs:
             echo "::group::[$ID] $NAME"
             echo "YouTube URL: $YOUTUBE_URL"
 
-            # --- Build a filesystem/URL-safe filename -------------------
-            SAFE_NAME=$(echo "$NAME" \
-              | sed 's/[\/\\:*?"<>|]/_/g' \
-              | sed -E 's/ +/ /g; s/^ +| +$//g')
-            FILENAME="${SAFE_NAME}.mp4"
+           # --- Use Video ID as filename to avoid special characters issues ---
+            FILENAME="${ID}.mp4"
 
             # --- Skip if this asset already exists in the release -------
             # This is the key duplicate-prevention check: it happens
