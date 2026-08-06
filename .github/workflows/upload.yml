@@ -342,6 +342,7 @@ jobs:
             else
               UPLOAD_OK=0
             fi
+            tail -n 20 "$DOWNLOAD_DIR/${ID}_upload.log" || true
 
             if [ "$UPLOAD_OK" -ne 1 ]; then
               UPLOAD_ERROR=$(tr '\n' ' ' < "$DOWNLOAD_DIR/${ID}_upload.log" | tr '"' "'")
