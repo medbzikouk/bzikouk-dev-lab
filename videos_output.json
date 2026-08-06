@@ -1,0 +1,364 @@
+{
+  "release": "videos-lib",
+  "videos": [
+    {
+      "id": "001",
+      "name": "تحدي 10 ضد 100 ضد 1,000,000 ! من سيصنع أفضل منزل؟",
+      "youtube": "https://www.youtube.com/watch?v=kA5U1wIoXYg",
+      "filename": "001.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/001.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:33:35Z"
+    },
+    {
+      "id": "002",
+      "name": "مغامرة أوليفر في بيت البالونات!",
+      "youtube": "https://www.youtube.com/watch?v=VyU7ggITfCU",
+      "filename": "002.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/002.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:33:56Z"
+    },
+    {
+      "id": "003",
+      "name": "يوم ممتع في مطعم السيارات!",
+      "youtube": "https://www.youtube.com/watch?v=_mUFaWKMMY0",
+      "filename": "003.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/003.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:34:15Z"
+    },
+    {
+      "id": "004",
+      "name": "ألعاب المسبح للأطفال - تعلّم المشاركة",
+      "youtube": "https://www.youtube.com/watch?v=NSyENZWCp4M",
+      "filename": "004.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/004.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:34:37Z"
+    },
+    {
+      "id": "005",
+      "name": "قصص للأطفال عن النظافة والعادات الجيدة",
+      "youtube": "https://www.youtube.com/watch?v=njnH7qZY7qU",
+      "filename": "005.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/005.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:35:07Z"
+    },
+    {
+      "id": "006",
+      "name": "آدم وأمه يتعلمان عادات جيدة للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=dUP7-IslFHk",
+      "filename": "006.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/006.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:35:27Z"
+    },
+    {
+      "id": "007",
+      "name": "بيض عيد الفصح السحري! مفاجأة غير متوقعة مع أوليفر",
+      "youtube": "https://www.youtube.com/watch?v=bNLIol71WEU",
+      "filename": "007.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/007.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:35:46Z"
+    },
+    {
+      "id": "008",
+      "name": "أطفال عالقون داخل كتاب سحري! إنقاذ قصص الأميرات",
+      "youtube": "https://www.youtube.com/watch?v=cmo6OOhmfaE",
+      "filename": "008.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/008.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:36:12Z"
+    },
+    {
+      "id": "009",
+      "name": "آدم وأمه يلعبان بلعبة الميكروويف",
+      "youtube": "https://www.youtube.com/watch?v=v29MpOt0k4Q",
+      "filename": "009.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/009.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:36:33Z"
+    },
+    {
+      "id": "010",
+      "name": "قصص الأبطال الخارقين للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=-zjVfpPxN7E",
+      "filename": "010.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/010.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:37:06Z"
+    },
+    {
+      "id": "011",
+      "name": "مغامرة سينما السيارات للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=0Gw3O4VHdQk",
+      "filename": "011.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/011.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:37:26Z"
+    },
+    {
+      "id": "012",
+      "name": "لا تُلقِ القمامة يا أطفال! مغامرة وحوش القمامة",
+      "youtube": "https://www.youtube.com/watch?v=zVSVrZXSnQE",
+      "filename": "012.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/012.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:37:46Z"
+    },
+    {
+      "id": "013",
+      "name": "الحيوانات الأليفة الآلية مقابل الحيوانات الأليفة الحقيقية! الأطفال يريدون حيوانًا أليفًا",
+      "youtube": "https://www.youtube.com/watch?v=-s7V5lAdftk",
+      "filename": "013.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/013.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:38:10Z"
+    },
+    {
+      "id": "014",
+      "name": "الأمير أوليفر ينقذ الأميرات",
+      "youtube": "https://www.youtube.com/watch?v=8IkMRGHDhrE",
+      "filename": "014.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/014.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:38:31Z"
+    },
+    {
+      "id": "015",
+      "name": "قصص تعليمية للأطفال عن الأمان والسلوك",
+      "youtube": "https://www.youtube.com/watch?v=7tbsMC2v-C8",
+      "uploaded": false,
+      "error": "Download failed: [download] Got error: [Errno 101] Network is unreachable. Retrying (5/5)... Sleeping 5.00 seconds ... ERROR: \r[download] Got error: [Errno 101] Network is unreachable. Giving up after 5 retries ",
+      "failed_at": "2026-08-06T03:41:09Z"
+    },
+    {
+      "id": "016",
+      "name": "الأطفال يتحولون إلى أبطال خارقون",
+      "youtube": "https://www.youtube.com/watch?v=qYOYLPFwmJo",
+      "filename": "016.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/016.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:41:31Z"
+    },
+    {
+      "id": "017",
+      "name": "تحدي حصالة من الورق المقوى",
+      "youtube": "https://www.youtube.com/watch?v=pnvBn6D8TTo",
+      "filename": "017.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/017.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:41:56Z"
+    },
+    {
+      "id": "018",
+      "name": "مهمة التنظيف الكبرى! قصة مضحكة للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=gDH3BHfMeZo",
+      "filename": "018.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/018.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:42:14Z"
+    },
+    {
+      "id": "019",
+      "name": "مغامرة متاهة على طراز ماين كرافت مع أوليفر للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=dLRAs4Dsx4g",
+      "filename": "019.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/019.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:42:39Z"
+    },
+    {
+      "id": "020",
+      "name": "أفضل قصص الأميرات للأطفال - الغنية مقابل الفقيرة",
+      "youtube": "https://www.youtube.com/watch?v=wzWQf44zQGk",
+      "filename": "020.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/020.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:43:15Z"
+    },
+    {
+      "id": "021",
+      "name": "من أفضل أم؟ - ماما من الصندوق للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=wCXSfYOQAY8",
+      "filename": "021.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/021.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:43:39Z"
+    },
+    {
+      "id": "022",
+      "name": "كهف كرتوني غامض! الأطفال في مهمة إنقاذ",
+      "youtube": "https://www.youtube.com/watch?v=vhA70hfbosE",
+      "filename": "022.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/022.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:44:02Z"
+    },
+    {
+      "id": "023",
+      "name": "أوليفر داخل تحدي آلة العلك",
+      "youtube": "https://www.youtube.com/watch?v=8G_Yfj8LMU4",
+      "filename": "023.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/023.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:44:31Z"
+    },
+    {
+      "id": "024",
+      "name": "قواعد السلامة الممتعة في لوكو بير! ملعب داخلي للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=J00un0G4jPk",
+      "filename": "024.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/024.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:44:53Z"
+    },
+    {
+      "id": "025",
+      "name": "مغامرات أوليفر وآدم - قصص أطفال ممتعة",
+      "youtube": "https://www.youtube.com/watch?v=7I8fmVmJxHU",
+      "filename": "025.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/025.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:45:43Z"
+    },
+    {
+      "id": "026",
+      "name": "مقهى الوحوش - مغامرة ممتعة للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=XIjEnfP6ZwE",
+      "filename": "026.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/026.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:46:08Z"
+    },
+    {
+      "id": "027",
+      "name": "قصة أميرة الجليد ضد أميرة النار",
+      "youtube": "https://www.youtube.com/watch?v=7JJb0zepimw",
+      "filename": "027.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/027.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:46:31Z"
+    },
+    {
+      "id": "028",
+      "name": "أوليفر والعامل الجديد في غسيل السيارات!",
+      "youtube": "https://www.youtube.com/watch?v=HiHZY1R23OM",
+      "filename": "028.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/028.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:46:55Z"
+    },
+    {
+      "id": "029",
+      "name": "لعبة الغميضة بلون واحد مع أوليفر وأصدقائه",
+      "youtube": "https://www.youtube.com/watch?v=-AftnCJUk94",
+      "filename": "029.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/029.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:47:25Z"
+    },
+    {
+      "id": "030",
+      "name": "مغامرات أوليفر وآدم مع الحيوانات - تجميع ممتع للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=l8emGLTf7WM",
+      "filename": "030.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/030.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:47:57Z"
+    },
+    {
+      "id": "031",
+      "name": "ألعاب الديناصورات الخاصة بأوليفر أصبحت حية في منزله!",
+      "youtube": "https://www.youtube.com/watch?v=Re-Df8h9LKY",
+      "filename": "031.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/031.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:48:18Z"
+    },
+    {
+      "id": "032",
+      "name": "أوليفر وآدم ينقذان الحيوانات",
+      "youtube": "https://www.youtube.com/watch?v=N67A4Q4SuSo",
+      "filename": "032.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/032.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:48:39Z"
+    },
+    {
+      "id": "033",
+      "name": "الفتاة الفقيرة والفتاة الغنية - قصة كرتونية مؤثرة عن اللطف",
+      "youtube": "https://www.youtube.com/watch?v=MxBpPFBrFVM",
+      "filename": "033.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/033.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:49:08Z"
+    },
+    {
+      "id": "034",
+      "name": "يتعلم الأطفال عادات جيدة - مغامرة بلا شاشات!",
+      "youtube": "https://www.youtube.com/watch?v=Dcta2DTsvyA",
+      "filename": "034.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/034.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:49:38Z"
+    },
+    {
+      "id": "035",
+      "name": "مغامرة جيران الفندق مع فتيات مضحكات - فيديو كوميدي للأطفال",
+      "youtube": "https://www.youtube.com/watch?v=HElfGqUp7V8",
+      "filename": "035.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/035.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:50:02Z"
+    },
+    {
+      "id": "036",
+      "name": "الأطفال الأبطال - مجموعة قصص كريسمس ممتعة",
+      "youtube": "https://www.youtube.com/watch?v=f-Y3ODixTk0",
+      "filename": "036.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/036.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:50:40Z"
+    },
+    {
+      "id": "037",
+      "name": "مغامرة التزلج مع ديانا وروما في سكي دبي!",
+      "youtube": "https://www.youtube.com/watch?v=2dGKHaCE3aA",
+      "filename": "037.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/037.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:50:59Z"
+    },
+    {
+      "id": "038",
+      "name": "الأطفال يتحولون إلى أبطال خارقون 2",
+      "youtube": "https://www.youtube.com/watch?v=qTdec_kZSGc",
+      "filename": "038.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/038.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:51:18Z"
+    },
+    {
+      "id": "039",
+      "name": "جرينش ضد أطفال Home Alone",
+      "youtube": "https://www.youtube.com/watch?v=ed1L-5wUNo4",
+      "filename": "039.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/039.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:51:40Z"
+    },
+    {
+      "id": "040",
+      "name": "يوم سبا ممتع لسانتا مع الأطفال!",
+      "youtube": "https://www.youtube.com/watch?v=tVtXPgrFefE",
+      "filename": "040.mp4",
+      "download_url": "https://github.com/medbzikouk/bzikouk-dev-lab/releases/download/videos-lib/040.mp4",
+      "uploaded": true,
+      "uploaded_at": "2026-08-06T03:51:59Z"
+    }
+  ]
+}
