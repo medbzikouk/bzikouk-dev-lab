@@ -137,9 +137,23 @@ jobs:
           if [ -n "${YOUTUBE_COOKIES:-}" ]; then
             printf '%s\n' "$YOUTUBE_COOKIES" > "$COOKIES_PATH"
             chmod 600 "$COOKIES_PATH"
-            echo "YOUTUBE_COOKIES secret found — cookie-authenticated downloads enabled."
+            echo "YOUTUBE_COOKIES secret found — validating format..."
+
+            # Diagnostics only — never print cookie values themselves.
+            FIRST_LINE=$(head -n1 "$COOKIES_PATH")
+            YT_LINE_COUNT=$(grep -c '\.youtube\.com' "$COOKIES_PATH" || true)
+
+            if [[ "$FIRST_LINE" != "# Netscape HTTP Cookie File"* && "$FIRST_LINE" != "# HTTP Cookie File"* ]]; then
+              echo "::warning::Cookies file does not start with the expected Netscape header. The secret may have been pasted incorrectly (wrong format, or JSON instead of cookies.txt)."
+            fi
+
+            if [ "$YT_LINE_COUNT" -eq 0 ]; then
+              echo "::warning::No .youtube.com cookie lines were found in the secret. Downloads will likely still fail with 'Sign in to confirm you're not a bot'."
+            else
+              echo "Found $YT_LINE_COUNT youtube.com cookie line(s). Cookie-authenticated downloads enabled."
+            fi
           else
-            echo "No YOUTUBE_COOKIES secret set — continuing without cookies (may hit bot checks on some videos)."
+            echo "::warning::No YOUTUBE_COOKIES secret set — YouTube is currently blocking GitHub Actions IPs without cookies, so downloads will likely fail with 'Sign in to confirm you're not a bot'. See the workflow comments for setup steps."
           fi
 
       # -----------------------------------------------------------------
