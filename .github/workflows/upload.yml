@@ -363,7 +363,7 @@ jobs:
             # Ask the API for the authoritative browser_download_url rather
             # than constructing it by hand, so URL-encoding is always correct.
             DOWNLOAD_URL=$(gh api "repos/$REPO/releases/tags/$RELEASE_TAG" \
-              --jq --arg name "$FILENAME" '.assets[] | select(.name == $name) | .browser_download_url' \
+              | jq -r --arg name "$FILENAME" '.assets[] | select(.name == $name) | .browser_download_url' \
               | head -n1)
 
             echo "Uploaded successfully -> $DOWNLOAD_URL"
