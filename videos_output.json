@@ -7,7 +7,7 @@
       "youtube": "https://www.youtube.com/watch?v=kA5U1wIoXYg",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] kA5U1wIoXYg: Downloading android vr player API JSON ERROR: [youtube] kA5U1wIoXYg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:27Z"
+      "failed_at": "2026-08-06T02:14:46Z"
     },
     {
       "id": "002",
@@ -15,7 +15,7 @@
       "youtube": "https://www.youtube.com/watch?v=VyU7ggITfCU",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] VyU7ggITfCU: Downloading android vr player API JSON ERROR: [youtube] VyU7ggITfCU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:29Z"
+      "failed_at": "2026-08-06T02:14:48Z"
     },
     {
       "id": "003",
@@ -23,7 +23,7 @@
       "youtube": "https://www.youtube.com/watch?v=_mUFaWKMMY0",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] _mUFaWKMMY0: Downloading android vr player API JSON ERROR: [youtube] _mUFaWKMMY0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:31Z"
+      "failed_at": "2026-08-06T02:14:50Z"
     },
     {
       "id": "004",
@@ -31,7 +31,7 @@
       "youtube": "https://www.youtube.com/watch?v=NSyENZWCp4M",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] NSyENZWCp4M: Downloading android vr player API JSON ERROR: [youtube] NSyENZWCp4M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:33Z"
+      "failed_at": "2026-08-06T02:14:53Z"
     },
     {
       "id": "005",
@@ -39,7 +39,7 @@
       "youtube": "https://www.youtube.com/watch?v=njnH7qZY7qU",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] njnH7qZY7qU: Downloading android vr player API JSON ERROR: [youtube] njnH7qZY7qU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:35Z"
+      "failed_at": "2026-08-06T02:14:56Z"
     },
     {
       "id": "006",
@@ -47,7 +47,7 @@
       "youtube": "https://www.youtube.com/watch?v=dUP7-IslFHk",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] dUP7-IslFHk: Downloading android vr player API JSON ERROR: [youtube] dUP7-IslFHk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:37Z"
+      "failed_at": "2026-08-06T02:14:59Z"
     },
     {
       "id": "007",
@@ -55,7 +55,7 @@
       "youtube": "https://www.youtube.com/watch?v=bNLIol71WEU",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] bNLIol71WEU: Downloading android vr player API JSON ERROR: [youtube] bNLIol71WEU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:38Z"
+      "failed_at": "2026-08-06T02:15:01Z"
     },
     {
       "id": "008",
@@ -63,7 +63,7 @@
       "youtube": "https://www.youtube.com/watch?v=cmo6OOhmfaE",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] cmo6OOhmfaE: Downloading android vr player API JSON ERROR: [youtube] cmo6OOhmfaE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:40Z"
+      "failed_at": "2026-08-06T02:15:03Z"
     },
     {
       "id": "009",
@@ -71,7 +71,7 @@
       "youtube": "https://www.youtube.com/watch?v=v29MpOt0k4Q",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] v29MpOt0k4Q: Downloading android vr player API JSON ERROR: [youtube] v29MpOt0k4Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:42Z"
+      "failed_at": "2026-08-06T02:15:05Z"
     },
     {
       "id": "010",
@@ -79,7 +79,7 @@
       "youtube": "https://www.youtube.com/watch?v=-zjVfpPxN7E",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] -zjVfpPxN7E: Downloading android vr player API JSON ERROR: [youtube] -zjVfpPxN7E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:44Z"
+      "failed_at": "2026-08-06T02:15:07Z"
     },
     {
       "id": "011",
@@ -87,7 +87,7 @@
       "youtube": "https://www.youtube.com/watch?v=0Gw3O4VHdQk",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] 0Gw3O4VHdQk: Downloading android vr player API JSON ERROR: [youtube] 0Gw3O4VHdQk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:46Z"
+      "failed_at": "2026-08-06T02:15:09Z"
     },
     {
       "id": "012",
@@ -95,7 +95,7 @@
       "youtube": "https://www.youtube.com/watch?v=zVSVrZXSnQE",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] zVSVrZXSnQE: Downloading android vr player API JSON ERROR: [youtube] zVSVrZXSnQE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:48Z"
+      "failed_at": "2026-08-06T02:15:12Z"
     },
     {
       "id": "013",
@@ -103,7 +103,7 @@
       "youtube": "https://www.youtube.com/watch?v=-s7V5lAdftk",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] -s7V5lAdftk: Downloading android vr player API JSON ERROR: [youtube] -s7V5lAdftk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:50Z"
+      "failed_at": "2026-08-06T02:15:14Z"
     },
     {
       "id": "014",
@@ -111,7 +111,7 @@
       "youtube": "https://www.youtube.com/watch?v=8IkMRGHDhrE",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] 8IkMRGHDhrE: Downloading android vr player API JSON ERROR: [youtube] 8IkMRGHDhrE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:52Z"
+      "failed_at": "2026-08-06T02:15:16Z"
     },
     {
       "id": "015",
@@ -119,7 +119,7 @@
       "youtube": "https://www.youtube.com/watch?v=7tbsMC2v-C8",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] 7tbsMC2v-C8: Downloading android vr player API JSON ERROR: [youtube] 7tbsMC2v-C8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:54Z"
+      "failed_at": "2026-08-06T02:15:18Z"
     },
     {
       "id": "016",
@@ -127,7 +127,7 @@
       "youtube": "https://www.youtube.com/watch?v=qYOYLPFwmJo",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] qYOYLPFwmJo: Downloading android vr player API JSON ERROR: [youtube] qYOYLPFwmJo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:56Z"
+      "failed_at": "2026-08-06T02:15:22Z"
     },
     {
       "id": "017",
@@ -135,7 +135,7 @@
       "youtube": "https://www.youtube.com/watch?v=pnvBn6D8TTo",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] pnvBn6D8TTo: Downloading android vr player API JSON ERROR: [youtube] pnvBn6D8TTo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:09:58Z"
+      "failed_at": "2026-08-06T02:15:24Z"
     },
     {
       "id": "018",
@@ -143,7 +143,7 @@
       "youtube": "https://www.youtube.com/watch?v=gDH3BHfMeZo",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] gDH3BHfMeZo: Downloading android vr player API JSON ERROR: [youtube] gDH3BHfMeZo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:00Z"
+      "failed_at": "2026-08-06T02:15:26Z"
     },
     {
       "id": "019",
@@ -151,7 +151,7 @@
       "youtube": "https://www.youtube.com/watch?v=dLRAs4Dsx4g",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] dLRAs4Dsx4g: Downloading android vr player API JSON ERROR: [youtube] dLRAs4Dsx4g: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:01Z"
+      "failed_at": "2026-08-06T02:15:28Z"
     },
     {
       "id": "020",
@@ -159,7 +159,7 @@
       "youtube": "https://www.youtube.com/watch?v=wzWQf44zQGk",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] wzWQf44zQGk: Downloading android vr player API JSON ERROR: [youtube] wzWQf44zQGk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:04Z"
+      "failed_at": "2026-08-06T02:15:31Z"
     },
     {
       "id": "021",
@@ -167,7 +167,7 @@
       "youtube": "https://www.youtube.com/watch?v=wCXSfYOQAY8",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] wCXSfYOQAY8: Downloading android vr player API JSON ERROR: [youtube] wCXSfYOQAY8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:05Z"
+      "failed_at": "2026-08-06T02:15:33Z"
     },
     {
       "id": "022",
@@ -175,7 +175,7 @@
       "youtube": "https://www.youtube.com/watch?v=vhA70hfbosE",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] vhA70hfbosE: Downloading android vr player API JSON ERROR: [youtube] vhA70hfbosE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:07Z"
+      "failed_at": "2026-08-06T02:15:35Z"
     },
     {
       "id": "023",
@@ -183,7 +183,7 @@
       "youtube": "https://www.youtube.com/watch?v=8G_Yfj8LMU4",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] 8G_Yfj8LMU4: Downloading android vr player API JSON ERROR: [youtube] 8G_Yfj8LMU4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:09Z"
+      "failed_at": "2026-08-06T02:15:37Z"
     },
     {
       "id": "024",
@@ -191,7 +191,7 @@
       "youtube": "https://www.youtube.com/watch?v=J00un0G4jPk",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] J00un0G4jPk: Downloading android vr player API JSON ERROR: [youtube] J00un0G4jPk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:11Z"
+      "failed_at": "2026-08-06T02:15:39Z"
     },
     {
       "id": "025",
@@ -199,7 +199,7 @@
       "youtube": "https://www.youtube.com/watch?v=7I8fmVmJxHU",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] 7I8fmVmJxHU: Downloading android vr player API JSON ERROR: [youtube] 7I8fmVmJxHU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:13Z"
+      "failed_at": "2026-08-06T02:15:41Z"
     },
     {
       "id": "026",
@@ -207,7 +207,7 @@
       "youtube": "https://www.youtube.com/watch?v=XIjEnfP6ZwE",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] XIjEnfP6ZwE: Downloading android vr player API JSON ERROR: [youtube] XIjEnfP6ZwE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:15Z"
+      "failed_at": "2026-08-06T02:15:43Z"
     },
     {
       "id": "027",
@@ -215,7 +215,7 @@
       "youtube": "https://www.youtube.com/watch?v=7JJb0zepimw",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] 7JJb0zepimw: Downloading android vr player API JSON ERROR: [youtube] 7JJb0zepimw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:17Z"
+      "failed_at": "2026-08-06T02:15:45Z"
     },
     {
       "id": "028",
@@ -223,7 +223,7 @@
       "youtube": "https://www.youtube.com/watch?v=HiHZY1R23OM",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] HiHZY1R23OM: Downloading android vr player API JSON ERROR: [youtube] HiHZY1R23OM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:19Z"
+      "failed_at": "2026-08-06T02:15:47Z"
     },
     {
       "id": "029",
@@ -231,7 +231,7 @@
       "youtube": "https://www.youtube.com/watch?v=-AftnCJUk94",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] -AftnCJUk94: Downloading android vr player API JSON ERROR: [youtube] -AftnCJUk94: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:21Z"
+      "failed_at": "2026-08-06T02:15:49Z"
     },
     {
       "id": "030",
@@ -239,7 +239,7 @@
       "youtube": "https://www.youtube.com/watch?v=l8emGLTf7WM",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] l8emGLTf7WM: Downloading android vr player API JSON ERROR: [youtube] l8emGLTf7WM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:23Z"
+      "failed_at": "2026-08-06T02:15:51Z"
     },
     {
       "id": "031",
@@ -247,7 +247,7 @@
       "youtube": "https://www.youtube.com/watch?v=Re-Df8h9LKY",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] Re-Df8h9LKY: Downloading android vr player API JSON ERROR: [youtube] Re-Df8h9LKY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:25Z"
+      "failed_at": "2026-08-06T02:15:53Z"
     },
     {
       "id": "032",
@@ -255,7 +255,7 @@
       "youtube": "https://www.youtube.com/watch?v=N67A4Q4SuSo",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] N67A4Q4SuSo: Downloading android vr player API JSON ERROR: [youtube] N67A4Q4SuSo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:27Z"
+      "failed_at": "2026-08-06T02:15:55Z"
     },
     {
       "id": "033",
@@ -263,7 +263,7 @@
       "youtube": "https://www.youtube.com/watch?v=MxBpPFBrFVM",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] MxBpPFBrFVM: Downloading android vr player API JSON ERROR: [youtube] MxBpPFBrFVM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:29Z"
+      "failed_at": "2026-08-06T02:15:58Z"
     },
     {
       "id": "034",
@@ -271,7 +271,7 @@
       "youtube": "https://www.youtube.com/watch?v=Dcta2DTsvyA",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] Dcta2DTsvyA: Downloading android vr player API JSON ERROR: [youtube] Dcta2DTsvyA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:31Z"
+      "failed_at": "2026-08-06T02:16:00Z"
     },
     {
       "id": "035",
@@ -279,7 +279,7 @@
       "youtube": "https://www.youtube.com/watch?v=HElfGqUp7V8",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] HElfGqUp7V8: Downloading android vr player API JSON ERROR: [youtube] HElfGqUp7V8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:33Z"
+      "failed_at": "2026-08-06T02:16:02Z"
     },
     {
       "id": "036",
@@ -287,7 +287,7 @@
       "youtube": "https://www.youtube.com/watch?v=f-Y3ODixTk0",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] f-Y3ODixTk0: Downloading android vr player API JSON ERROR: [youtube] f-Y3ODixTk0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:35Z"
+      "failed_at": "2026-08-06T02:16:04Z"
     },
     {
       "id": "037",
@@ -295,7 +295,7 @@
       "youtube": "https://www.youtube.com/watch?v=2dGKHaCE3aA",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] 2dGKHaCE3aA: Downloading android vr player API JSON ERROR: [youtube] 2dGKHaCE3aA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:37Z"
+      "failed_at": "2026-08-06T02:16:06Z"
     },
     {
       "id": "038",
@@ -303,7 +303,7 @@
       "youtube": "https://www.youtube.com/watch?v=qTdec_kZSGc",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] qTdec_kZSGc: Downloading android vr player API JSON ERROR: [youtube] qTdec_kZSGc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:39Z"
+      "failed_at": "2026-08-06T02:16:08Z"
     },
     {
       "id": "039",
@@ -311,7 +311,7 @@
       "youtube": "https://www.youtube.com/watch?v=ed1L-5wUNo4",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] ed1L-5wUNo4: Downloading android vr player API JSON ERROR: [youtube] ed1L-5wUNo4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:41Z"
+      "failed_at": "2026-08-06T02:16:11Z"
     },
     {
       "id": "040",
@@ -319,7 +319,7 @@
       "youtube": "https://www.youtube.com/watch?v=tVtXPgrFefE",
       "uploaded": false,
       "error": "Download failed: WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  https://github.com/yt-dlp/yt-dlp/wiki/EJS  for details on installing one [youtube] tVtXPgrFefE: Downloading android vr player API JSON ERROR: [youtube] tVtXPgrFefE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies ",
-      "failed_at": "2026-08-06T02:10:43Z"
+      "failed_at": "2026-08-06T02:16:13Z"
     }
   ]
 }
