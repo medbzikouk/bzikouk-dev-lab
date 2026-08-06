@@ -49,6 +49,9 @@ env:
   # hang forever on a single stuck download.
   DOWNLOAD_TIMEOUT_SECONDS: 900
   YTDLP_RETRIES: 5
+  # Optional cookies file (see "Prepare YouTube cookies" step below).
+  # Lives outside the repo checkout so it can never be committed by accident.
+  COOKIES_PATH: /tmp/yt-cookies.txt
 
 jobs:
   upload-videos:
@@ -105,6 +108,40 @@ jobs:
             -o /usr/local/bin/yt-dlp
           sudo chmod a+rx /usr/local/bin/yt-dlp
 
+      # yt-dlp needs a JS runtime to solve YouTube's signature/nsig
+      # challenges. Without one, extraction is degraded and far more likely
+      # to be flagged as a bot. This does not require any secret/login.
+      - name: Install Deno (JS runtime for yt-dlp)
+        run: |
+          curl -fsSL https://deno.land/install.sh | sh -s -- -y
+          echo "$HOME/.deno/bin" >> "$GITHUB_PATH"
+
+      # -----------------------------------------------------------------
+      # Optional but recommended: YouTube cookies.
+      # GitHub Actions runners share datacenter IPs, which YouTube is
+      # increasingly quick to flag with "Sign in to confirm you're not a
+      # bot". Supplying cookies from a real, logged-in browser session
+      # makes requests look like a normal user and greatly reduces this.
+      #
+      # To enable: export cookies.txt from a logged-in YouTube session
+      # (e.g. the "Get cookies.txt LOCALLY" browser extension), then add
+      # its full contents as a repository secret named YOUTUBE_COOKIES
+      # (Settings -> Secrets and variables -> Actions -> New repository
+      # secret). If the secret is not set, this step is skipped and the
+      # workflow falls back to cookie-less downloads.
+      # -----------------------------------------------------------------
+      - name: Prepare YouTube cookies (optional)
+        env:
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+        run: |
+          if [ -n "${YOUTUBE_COOKIES:-}" ]; then
+            printf '%s\n' "$YOUTUBE_COOKIES" > "$COOKIES_PATH"
+            chmod 600 "$COOKIES_PATH"
+            echo "YOUTUBE_COOKIES secret found — cookie-authenticated downloads enabled."
+          else
+            echo "No YOUTUBE_COOKIES secret set — continuing without cookies (may hit bot checks on some videos)."
+          fi
+
       # -----------------------------------------------------------------
       # 3. Verify every tool before continuing.
       #    If any tool is broken/missing, fail fast with a clear message
@@ -117,6 +154,11 @@ jobs:
           echo "ffmpeg:  $(ffmpeg -version | head -n1)"
           echo "yt-dlp:  $(yt-dlp --version)"
           echo "gh:      $(gh --version | head -n1)"
+          if command -v deno >/dev/null 2>&1; then
+            echo "deno:    $(deno --version | head -n1)"
+          else
+            echo "::warning::deno not found on PATH — yt-dlp will run without a JS runtime, which increases the chance of bot-check failures."
+          fi
           echo "All required tools are available."
 
       # -----------------------------------------------------------------
@@ -227,9 +269,17 @@ jobs:
             # --continue: resume partially downloaded files.
             # --retries/--fragment-retries: automatic retry on network blips.
             # timeout: hard cap so one stuck video can't hang the whole job.
-            echo "Downloading..."
+            # Build cookie args only if a cookies file was prepared earlier
+            # (see "Prepare YouTube cookies" step). Kept as an array so an
+            # empty/missing file cleanly results in no extra arguments.
+            COOKIE_ARGS=()
+            if [ -s "$COOKIES_PATH" ]; then
+              COOKIE_ARGS=(--cookies "$COOKIES_PATH")
+            fi
+
+            echo "Downloading (max quality: 720p)..."
             if timeout "${DOWNLOAD_TIMEOUT_SECONDS}s" yt-dlp \
-                -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" \
+                -f "bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best[ext=mp4][height<=720]/best[height<=720]" \
                 --merge-output-format mp4 \
                 --no-playlist \
                 --continue \
@@ -239,6 +289,9 @@ jobs:
                 --retry-sleep 5 \
                 --ignore-config \
                 --no-progress \
+                --extractor-args "youtube:player_client=android,tv,web" \
+                --sleep-requests 1 \
+                "${COOKIE_ARGS[@]}" \
                 -o "$OUTPUT_PATH" \
                 "$YOUTUBE_URL" > "$LOG_FILE" 2>&1; then
               DOWNLOAD_OK=1
